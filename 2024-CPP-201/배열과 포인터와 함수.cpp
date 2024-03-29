@@ -10,6 +10,7 @@ void erase(int* _arr, int _length) {
 int main(void) {
 	int arr[4] = {10,20,30,40};
 	int length = sizeof(arr) / sizeof(arr[0]);
+
 	erase(arr, length);
 
 	for (int i = 0; i < 4; i++) {
