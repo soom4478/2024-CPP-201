@@ -10,6 +10,8 @@ public:
 	Student(int hakbun, string name)
 		: hakbun_(hakbun), name_(name)	// 초기화를 동시에 (const를 할 수 있다)
 	{
+		// this: 객체 자기자신을 가리키는 포인터
+		this->hakbun_ = hakbun;
 	}
 
 	// 생성자 오버로딩
