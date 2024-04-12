@@ -34,7 +34,7 @@ void main(void) {
 	// 정적할당 : stack 영역에 할당. 컴파일 시간에 메모리 크기 결정
 	Student jwp = Student();
 
-	(*juyoung).print(); // 연산자 우선순위로 인해 ()를 적음
+	juyoung -> print();
 	jwp.print();
 
 	// 동적할당된 메모리 해제
