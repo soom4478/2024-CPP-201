@@ -12,7 +12,7 @@ public:
 	~Person()
 	{
 		cout << "부모소멸자 호출" << endl;
-	}
+	} 
 	void show_person() {
 		cout << name_ << "의 나이는 " << age_ << "입니다." << endl;
 	}
