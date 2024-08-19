@@ -9,7 +9,8 @@ public:
 	Animal(string name, unsigned int age)
 		: name_(name), age_(age)
 	{
-
+		cout << "ÀÌ¸§ " << name_ << endl;
+		cout << "³ªÀÌ " << age_ << endl;
 	}
 
 	void bark()
@@ -34,16 +35,44 @@ private:
 };
 
 class Human : public Animal {
+public:
+	Human(string name, int age, bool right)
+		: Animal(name, age), right_(right)
+	{
+		cout << "ÀÎ±ÇÁ¸Àç¿©ºÎ " << right_ << endl;
+	}
+
+	void bark()
+	{
+		cout << "ÅåÅå" << endl;
+	}
+
+	void sleep()
+	{
+		cout << "ÄðÄð" << endl;
+	}
+
+	void eat()
+	{
+		cout << "¾ä¾ä" << endl;
+	}
+
 private:
-	string name_;
-	unsigned int age_;
+	bool right_;
 };
 
 void main(void) {
 	Animal * ani = new Animal("Á¤¹Î", 18);
+
 	ani->bark();
 	ani->eat();
 	ani->sleep();
 
+	Human* hum = new Human("ÁöÇý", 18, true);
+	hum->bark();
+	hum->eat();
+	hum->sleep();
+
+	delete hum;
 	delete ani;
 }
