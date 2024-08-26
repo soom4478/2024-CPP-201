@@ -13,6 +13,11 @@ public:
 		cout << "³ªÀÌ " << age_ << endl;
 	}
 
+	virtual ~Animal()
+	{
+		cout << "Animal ¼Ò¸êÀÚ" << endl;
+	}
+
 	virtual void  bark()
 	{
 		cout << "Àß Áş´Â´Ù" << endl;
@@ -40,6 +45,11 @@ public:
 		: Animal(name, age), right_(right)
 	{
 		cout << "ÀÎ±ÇÁ¸Àç¿©ºÎ " << right_ << endl;
+	}
+
+	virtual ~Human()
+	{
+		cout << "Human ¼Ò¸ê " << endl;
 	}
 
 	void bark() override
