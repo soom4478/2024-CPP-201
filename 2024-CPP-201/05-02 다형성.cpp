@@ -42,17 +42,17 @@ public:
 		cout << "ÀÎ±ÇÁ¸Àç¿©ºÎ " << right_ << endl;
 	}
 
-	void bark()
+	void bark() override
 	{
 		cout << "ÅåÅå" << endl;
 	}
 
-	void sleep()
+	void sleep() override
 	{
 		cout << "ÄğÄğ" << endl;
 	}
 
-	void eat()
+	void eat() override
 	{
 		cout << "¾ä¾ä" << endl;
 	}

@@ -21,8 +21,6 @@ public:
 			cout << "³²Àº hp : " << hp_ << endl;
 		}
 	}
-private:
-
 };
 
 class Zombie : public Monster{
