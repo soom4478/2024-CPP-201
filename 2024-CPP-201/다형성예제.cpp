@@ -16,7 +16,8 @@ public:
 		cout << "아름다움 : " << beauty_ << endl;
 	}
 
-private:
+	virtual void attack(Clothes* target) = 0;
+
 	string name_;
 	int price_;
 	int making_time_;
@@ -35,7 +36,11 @@ private:
 		 cout << "노리개 : " << norigea_ << endl;
 		 cout << "저고리 : " << jugori_ << endl;
 	 }
- private:
+
+	 void attack(Clothes* target) {
+		 target->beauty_ -= beauty_;
+	 };
+
 	 int norigea_;					// 노리개
 	 int jugori_;					// 저고리
 };
@@ -51,7 +56,11 @@ private:
 		 Clothes::show();
 		 cout << "오비 : " << belt_ << endl;
 	 }
- private:
+
+	 void attack(Clothes* target) {
+		 target->beauty_ -= beauty_;
+	 };
+
 	 int belt_;						// 오비
 };
 
@@ -65,7 +74,11 @@ private:
 	 {
 		 cout << "자수 : " << embroidery_ << endl;
 	 }
- private:
+
+	 void attack(Clothes* target) {
+		 target->beauty_ -= beauty_;
+	 };
+
 	 int embroidery_;
  };
 
@@ -75,6 +88,14 @@ private:
 
 	 player->show();
 	 chingu->show();
+
+	 cout << "---------------------------------" << endl;
+	 cout << "1. 공격" << endl;
+	 cout << "2. 특수공격1" << endl;
+	 cout << "3. 특수공격2" << endl;
+	 cout << "4. 도망" << endl;
+
+	 player->attack();
 
 	 delete chingu;
 	 delete player;
