@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -89,13 +90,39 @@ public:
 	 player->show();
 	 chingu->show();
 
-	 cout << "---------------------------------" << endl;
-	 cout << "1. 공격" << endl;
-	 cout << "2. 특수공격1" << endl;
-	 cout << "3. 특수공격2" << endl;
-	 cout << "4. 도망" << endl;
+	 int choice;
 
-	 player->attack();
+	 while (true)
+	 {
+		 system("cls");
+		 player->show();
+		 cout << endl << endl;
+		 chingu->show();
+
+		 cout << "---------------------------------" << endl;
+		 cout << "1. 공격" << endl;
+		 cout << "2. 특수공격1" << endl;
+		 cout << "3. 특수공격2" << endl;
+		 cout << "4. 도망" << endl;
+		 cin >> choice;
+
+		 switch (choice) {
+		 case 1:
+			 player->attack(chingu);
+			 break;
+		 case 2:
+			 cout << "특수공격1" << endl;
+			 break;
+		 case 3:
+			 cout << "특수공격2" << endl;
+			 break;
+		 case 4:
+			 cout << "도망" << endl;
+			 break;
+		 default:
+			 break;
+		 }
+	 }
 
 	 delete chingu;
 	 delete player;
