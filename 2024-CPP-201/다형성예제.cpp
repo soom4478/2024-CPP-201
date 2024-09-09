@@ -38,10 +38,19 @@ public:
 		 cout << "저고리 : " << jugori_ << endl;
 	 }
 
-	 void attack(Clothes* target) {
-		 target->beauty_ -= beauty_;
+	 void attack(Clothes* target) override
+	 {
+		 attack_count_++;
+		 if (attack_count_ == 3)
+		 {
+			 target->beauty_ -= beauty_ * 2;
+			 attack_count_ = 0;
+		 }
+		 else
+			 target->beauty_ -= beauty_;
 	 };
-
+	 
+	 int attack_count_ = 0; // 공격 횟수
 	 int norigea_;					// 노리개
 	 int jugori_;					// 저고리
 };
@@ -58,10 +67,19 @@ public:
 		 cout << "오비 : " << belt_ << endl;
 	 }
 
-	 void attack(Clothes* target) {
-		 target->beauty_ -= beauty_;
+	 void attack(Clothes* target) override
+	 {
+		 attack_count_++;
+		 if (attack_count_ == 3)
+		 {
+			 target->beauty_ -= beauty_ * 2;
+			 attack_count_ = 0;
+		 }
+		 else
+			 target->beauty_ -= beauty_;
 	 };
 
+	 int attack_count_ = 0; // 공격 횟수
 	 int belt_;						// 오비
 };
 
@@ -76,10 +94,19 @@ public:
 		 cout << "자수 : " << embroidery_ << endl;
 	 }
 
-	 void attack(Clothes* target) {
-		 target->beauty_ -= beauty_;
+	 void attack(Clothes* target) override
+	 {
+		 attack_count_++;
+		 if (attack_count_ == 3)
+		 {
+			 target->beauty_ -= beauty_ * 2;
+			 attack_count_ = 0;
+		 }
+		 else
+			 target->beauty_ -= beauty_;
 	 };
 
+	 int attack_count_ = 0; // 공격 횟수
 	 int embroidery_;
  };
 
