@@ -2,23 +2,23 @@
 
 using namespace std;
 
-enum CuisineStyle {
-    KOREAN = 0,
-    CHINESE = 1,
-    JAPANESE = 2
+enum FoodStyle {
+    KOREAN,
+    CHINESE,
+    JAPANESE
 };
 
 int main(void) {
-    CuisineStyle style = KOREAN;
+    FoodStyle style = FoodStyle::KOREAN;
 
     switch (style) {
-    case KOREAN:
+    case FoodStyle::KOREAN:
         cout << "한식" << endl;
         break;
-    case CHINESE:
+    case FoodStyle::CHINESE:
         cout << "중식" << endl;
         break;
-    case JAPANESE:
+    case FoodStyle::JAPANESE:
         cout << "일식" << endl;
         break;
     }
