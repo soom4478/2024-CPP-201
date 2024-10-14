@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="09-02 범위기반 for문.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="07-02 template.cpp">
+    <ClCompile Include="09-04 static.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
