@@ -12,6 +12,10 @@ private:
 public:
 	PrettyJ(int gam, string name) : gam_(gam), name_(name) { num_++; }
 	static int get_num(void) { return num_; }
+	static int get_num(void) {
+		// gam_++; // static 멤버함수에는 일반 멤버변수가 들어갈 수 없다.
+		return num_;
+	}
 	int get_gam(void) { return gam_; }
 	int* get_address_gam(void) { return &gam_;}
 	int* get_address_num(void) { return &num_; }
@@ -24,6 +28,7 @@ void main(void) {
 	PrettyJ* juyoung = new PrettyJ(509, "주영");
 	PrettyJ* jungmin = new PrettyJ(716, "정민");
 	cout << "현재 멤버 인원은 : " << PrettyJ::get_num() << endl;
+
 	PrettyJ* jiwoo = new PrettyJ(601, "지우");
 	cout << "현재 멤버 인원은 : " << PrettyJ::get_num() << endl;
 
