@@ -10,6 +10,8 @@ enum App {
 
 void main(void) {
 	RenderWindow window(VideoMode(App::WIDTH, App::HEIGHT), "Project");
+	// 초당 프레임 조절(컴퓨터 성능과 상관없이 일정한 속도)
+	window.setFramerateLimit(60);
 
 	RectangleShape player;
 	player.setSize(Vector2f(200.f, 200.f));
@@ -28,9 +30,9 @@ void main(void) {
 		if (Keyboard::isKeyPressed(Keyboard::Key::Left))
 			player.move(-10.f, 0.f);
 		if (Keyboard::isKeyPressed(Keyboard::Key::Up))
-			player.move(0.f, 10.f);
-		if (Keyboard::isKeyPressed(Keyboard::Key::Down))
 			player.move(0.f, -10.f);
+		if (Keyboard::isKeyPressed(Keyboard::Key::Down))
+			player.move(0.f, 10.f);
 
 		window.clear(Color::White);
 		window.draw(player);
